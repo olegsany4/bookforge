@@ -1,0 +1,129 @@
+---
+topic: >-
+  Мультиагентная система для написания книг
+positioning:
+  for_whom: >-
+    Техлиды и продюсеры EdTech/ИТ
+  problem_jobs:
+    - >-
+      Быстрое, воспроизводимое создание книги с контролем качества
+  unique_angle: >-
+    Инженерный пайплайн с KPI и автоматическими проверками качества
+audience:
+  primary: >-
+    Техлиды и продюсеры EdTech/ИТ
+  secondary: ''
+  prerequisites:
+    - >-
+      Базовые знания Git
+    - >-
+      Опыт чтения YAML/JSON
+scope:
+  target_pages: 160
+  page_budget:
+    - part: 'I. Концепт и бриф'
+      pages: 29
+    - part: 'II. Архитектура'
+      pages: 61
+    - part: 'III. Качество и продакшн'
+      pages: 51
+    - part: 'IV. Кейсы и чек-листы'
+      pages: 19
+  in_scope:
+    - >-
+      Дизайн ролей агентов и их промптов
+  out_of_scope:
+    - >-
+      Обучение собственных LLM с нуля
+reader_questions:
+  - >-
+    Как быстро получить рабочий пайплайн книги под ключ?
+  - >-
+    Какие роли агентов обязательны и как они взаимодействуют?
+  - >-
+    Как измерять качество и ловить деградации?
+objectives:
+  - >-
+    Зафиксировать архитектуру и роли (≤10 страниц) к концу Части I
+  - >-
+    Собрать MVP пайплайна с автопроверками к концу Части II
+  - >-
+    Покрытие упражнений ≥20% страниц к завершению Части III
+  - >-
+    Экспорт DOCX/PDF/EPUB без ошибок к финалу проекта
+structure_outline:
+  - part: 'I. Концепт и бриф'
+    chapters:
+      - >-
+        Позиционирование
+      - >-
+        Карта ролей
+      - >-
+        Контракты I/O
+  - part: 'II. Архитектура агентов'
+    chapters:
+      - >-
+        Оркестрация
+      - >-
+        Хранилище и версии
+      - >-
+        Промпт-инжиниринг
+  - part: 'III. Качество и продакшн'
+    chapters:
+      - >-
+        KPI и метрики
+      - >-
+        Проверки и тесты
+      - >-
+        CI/CD публикации
+  - part: 'IV. Кейсы и чек-листы'
+    chapters:
+      - >-
+        Внедрение A
+      - >-
+        Внедрение B
+      - >-
+        Антипаттерны
+outputs:
+  - DOCX
+  - PDF
+  - EPUB
+acceptance_criteria:
+  readability:
+    max_sentence_avg: 17
+    passive_voice_max: 8
+    simple_words_min: 75
+  structure:
+    chapter_len_variance_max: 20
+    each_chapter_has:
+      - hook
+      - objective
+      - example
+      - checkpoint
+  factuality:
+    claim_evidence_coverage_min: 80
+    zero_critical_errors_sample: 30
+  applicability:
+    exercises_share_min: 20
+    case_studies_min: 6
+  production:
+    styles_validated: true
+    export_success:
+      - DOCX
+      - PDF
+      - EPUB
+risks_assumptions:
+  risks:
+    - >-
+      Зависимость от нестабильных LLM-API
+  mitigations:
+    - >-
+      Кэширование, версионирование промптов и шаблонов
+  assumptions:
+    - >-
+      Доступна инфраструктура CI/CD
+workflow_notes:
+  sources_policy: >-
+    Каждый факт имеет ссылку на проверяемый источник
+  glossary_policy: >-
+    Термины вводятся при первом употреблении и сводятся в глоссарий
